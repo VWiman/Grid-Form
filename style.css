@@ -1,290 +1,286 @@
- @import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;500;700&display=swap");
 
- * {
-     box-sizing: border-box;
-     padding: 0;
-     margin: 0;
- }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
- body {
-     background-color: #f6d7b0;
-     color: rgba(80, 65, 57, 90%);
-     font-family: 'Saira', sans-serif;
- }
+body {
+  background-color: #f6d7b0;
+  color: rgba(80, 65, 57, 90%);
+  font-family: "Saira", sans-serif;
+}
 
- /* Containers */
+/* Containers */
 
- .container-main {
-     display: flex;
-     flex-direction: column;
-     position: relative;
-     min-height: 100vh;
- }
+.container-main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+}
 
- .container-top {
-     display: flex;
-     justify-content: center;
-     background-color: #eccca2;
-     padding: 10px;
-     border-bottom: 5px solid #e1bf92;
+.container-top {
+  display: flex;
+  justify-content: center;
+  background-color: #eccca2;
+  padding: 10px;
+  border-bottom: 5px solid #e1bf92;
+}
 
- }
+.container-mid {
+  max-width: 510px;
+  margin: 5px auto;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #eccca2;
+  border: 5px solid #e1bf92;
+}
 
- .container-mid {
-     max-width: 510px;
-     margin: 5px auto;
-     border-radius: 10px;
-     padding: 10px;
-     background-color: #eccca2;
-     border: 5px solid #e1bf92;
- }
+.container-bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #eccca2;
+  padding: 10px;
+  border-top: 5px solid #e1bf92;
+  margin-top: auto;
+}
 
- .container-bottom {
-     display: flex;
-     justify-content: center;
-     width: 100%;
-     background-color: #eccca2;
-     padding: 10px;
-     border-top: 5px solid #e1bf92;
-     margin-top: auto;
- }
+/* Grids */
 
- /* Grids */
+.main-grid {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  row-gap: 10px;
+  column-gap: 5px;
+}
 
- .main-grid {
-     display: grid;
-     grid-template-rows: repeat(8, 1fr);
-     grid-template-columns: repeat(10, 1fr);
-     row-gap: 10px;
-     column-gap: 5px;
- }
+.top-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 5px;
+  align-items: center;
+}
 
- .top-grid {
-     display: grid;
-     grid-template-columns: repeat(5, 1fr);
-     column-gap: 5px;
-     align-items: center;
- }
+.grid-item {
+  align-items: center;
+  max-height: 64px;
+}
 
- .grid-item {
-     align-items: center;
-     max-height: 64px;
- }
+/* Header */
 
- /* Header */
+.logo-brand {
+  display: flex;
+  justify-content: center;
+}
 
- .logo-brand {
-     display: flex;
-     justify-content: center;
+.logo {
+  width: 48px;
+  height: 48px;
+}
 
- }
+.brand {
+  color: #517339;
+  font-size: 32px;
+  white-space: nowrap;
+  align-self: center;
+  margin-right: 30px;
+}
 
- .logo {
-     width: 48px;
-     height: 48px;
- }
+/* Headlines */
 
- .brand {
-     color: #517339;
-     font-size: 32px;
-     white-space: nowrap;
-     align-self: center;
-     margin-right: 30px;
- }
+.info {
+  color: rgba(80, 65, 57, 95%);
+  font-size: 18px;
+  margin-bottom: 5px;
+}
 
- /* Headlines */
+.question {
+  color: rgba(80, 65, 57, 95%);
+  font-size: 16px;
+}
 
- .info {
-     color: rgba(80, 65, 57, 95%);
-     font-size: 18px;
-     margin-bottom: 5px;
- }
+/* Start of input fields in main-grid */
 
- .question {
-     color: rgba(80, 65, 57, 95%);
-     font-size: 16px;
- }
+.first-name {
+  grid-area: 1 / 1 / span 1 / span 10;
+}
 
- /* Start of input fields in main-grid */
+.last-name {
+  grid-area: 2 / 1 / span 1 / span 10;
+}
 
- .first-name {
-     grid-area: 1 / 1 / span 1 / span 10;
- }
+.adress {
+  grid-area: 3 / 1 / span 1 / span 10;
+}
 
- .last-name {
-     grid-area: 2 / 1 / span 1 / span 10;
- }
+.company {
+  grid-area: 4 / 1 / span 1 / span 10;
+}
 
- .adress {
-     grid-area: 3 / 1 / span 1 / span 10;
- }
+.postal-code {
+  grid-area: 5 / 1 / span 1 / span 5;
+}
 
- .company {
-     grid-area: 4 / 1 / span 1 / span 10;
- }
+.postal-city {
+  grid-area: 5 / 6 / span 1 / span 5;
+}
 
- .postal-code {
-     grid-area: 5 / 1 / span 1 / span 5;
- }
+.country {
+  grid-area: 6 / 1 / span 1 / span 10;
+  text-align: center;
+}
 
- .postal-city {
-     grid-area: 5 / 6 / span 1 / span 5;
- }
+.email {
+  grid-area: 7 / 1 / span 1 / span 10;
+}
 
- .country {
-     grid-area: 6 / 1 / span 1 / span 10;
-     text-align: center;
- }
+.subscribe {
+  grid-area: 8 / 1 / span 1 / span 10;
+  margin: 0 auto;
+  border: 3px solid #f6d7b0;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+  justify-content: center;
+  white-space: nowrap;
+}
 
- .email {
-     grid-area: 7 / 1 / span 1 / span 10;
- }
+.order-submit {
+  grid-area: 9 / 1 / span 1 / span 10;
+  text-align: end;
+}
 
- .subscribe {
-     grid-area: 8 / 1 / span 1 / span 10;
-     margin: 0 auto;
-     border: 3px solid #f6d7b0;
-     border-radius: 5px;
-     padding: 10px;
-     font-size: 12px;
-     justify-content: center;
-     white-space: nowrap;
- }
+/* Start of input fields in top-grid */
 
- .order-submit {
-     grid-area: 9 / 1 / span 1 / span 10;
-     text-align: end;
- }
+.username {
+  grid-area: 1 / 1 / span 1 / span 2;
+}
 
- /* Start of input fields in top-grid */
+.password {
+  grid-area: 1 / 3 / span 1 / span 2;
+}
 
- .username {
-     grid-area: 1 / 1 / span 1 / span 2;
- }
+.login-submit {
+  grid-area: 1 / 5 / span 1 / span 1;
+  white-space: nowrap;
+}
 
- .password {
-     grid-area: 1 / 3 / span 1 / span 2;
+/* Footer */
 
- }
+.credit {
+  font-size: 13px;
+}
 
- .login-submit {
-     grid-area: 1 / 5 / span 1 / span 1;
-     white-space: nowrap;
- }
+/* Hiding lables from anything but screen readers - this one I had to google */
 
- /* Footer */
+.hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
 
- .credit {
-     font-size: 13px;
- }
+/* Additional styling */
 
- /* Hiding lables from anything but screen readers - this one I had to google */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  height: 75%;
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid rgba(80, 65, 57, 90%);
+  background-color: #f6d7b0;
+}
 
- .hidden {
-     clip: rect(0 0 0 0);
-     clip-path: inset(50%);
-     overflow: hidden;
-     position: absolute;
-     white-space: nowrap;
- }
+input[type="checkbox"],
+input[type="checkbox"]:checked {
+  margin: 0 5px;
+  accent-color: white;
+}
 
- /* Additional styling */
+input[type="radio"] {
+  vertical-align: middle;
+}
 
- input[type="text"],
- input[type="password"],
- input[type="number"],
- input[type="email"] {
-     width: 100%;
-     height: 75%;
-     border-radius: 5px;
-     padding: 5px;
-     border: 2px solid rgba(80, 65, 57, 90%);
-     background-color: #f6d7b0;
- }
+label[for="sweden"],
+label[for="other"] {
+  font-size: 13px;
+}
 
- input[type="checkbox"],
- input[type="checkbox"]:checked {
-     margin: 0 5px;
-     accent-color: white;
- }
+button[type="submit"] {
+  color: white;
+  padding: 5px;
+  background-color: #517339;
+  border: 3px solid rgba(80, 65, 57, 30%);
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-family: "Saira", sans-serif;
+}
 
- input[type="radio"] {
-     vertical-align: middle;
- }
+/* Pseudo selectors */
 
- label[for="sweden"],
- label[for="other"] {
-     font-size: 13px;
- }
+.brand:hover {
+  color: #649245;
+  cursor: default;
+}
 
- button[type="submit"] {
-     color: white;
-     padding: 5px;
-     background-color: #517339;
-     border: 3px solid rgba(80, 65, 57, 30%);
-     border-radius: 3px;
-     letter-spacing: 0.5px;
-     font-size: 12px;
-     font-family: 'Saira', sans-serif;
- }
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  background-color: #f6dcbd;
+}
 
- /* Pseudo selectors */
+input::placeholder {
+  font-size: 14px;
+  font-family: "Saira", sans-serif;
+}
 
- .brand:hover {
-     color: #649245;
-     cursor: default;
- }
+.button:hover {
+  background-color: #649245;
+  color: white;
+}
 
- input[type="text"]:hover,
- input[type="password"]:hover,
- input[type="number"]:hover,
- input[type="email"]:hover,
- input[type="text"]:focus,
- input[type="password"]:focus,
- input[type="number"]:focus,
- input[type="email"]:focus {
-     background-color: #f6dcbd;
- }
+.button:active {
+  box-shadow: inset 0 0 5px rgba(80, 65, 57, 90%);
+  color: whitesmoke;
+}
 
- input::placeholder {
-     font-size: 14px;
-     font-family: 'Saira', sans-serif;
- }
+/* Responsive */
 
- .button:hover {
-     background-color: #649245;
-     color: white;
- }
+@media (max-width: 600px) {
+  .logo {
+    width: 32px;
+    height: 32px;
+  }
 
- .button:active {
-     box-shadow: inset 0 0 5px rgba(80, 65, 57, 90%);
-     color: whitesmoke;
- }
+  .brand {
+    font-size: 16px;
+  }
 
- /* Responsive */
+  input::placeholder {
+    font-size: 14px;
+    font-family: "Saira", sans-serif;
+  }
 
- @media (max-width: 600px) {
-     .logo {
-         width: 32px;
-         height: 32px;
-     }
+  .container-top {
+    display: flex;
+    flex-direction: column;
+  }
 
-     .brand {
-         font-size: 16px;
-
-     }
-
-     input::placeholder {
-         font-size: 14px;
-         font-family: 'Saira', sans-serif;
-     }
-
-     .container-top {
-         display: flex;
-         flex-direction: column;
-     }
-
-     .top-grid {
-         align-self: center;
-     }
- }
+  .top-grid {
+    align-self: center;
+  }
+}

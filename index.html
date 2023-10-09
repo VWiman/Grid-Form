@@ -1,107 +1,203 @@
 <!DOCTYPE html>
 <html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid-Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Grid-Form</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-
-    <body>
-        <!-- Start of container-main -->
-        <div class="container-main">
-            <!-- Header -->
-            <header>
-                <div class="container-top">
-                    <div class="logo-brand">
-                        <img src="./images/logo.png" alt="Logotyp för Gröna Systrar" class="logo" />
-                        <h1 class="brand">Gröna Systrar</h1>
-                    </div>
-                    <form action="https://httpbin.org/anything" method="post" class="top-grid" autocomplete="on"
-                        id="member">
-                        <div class="grid-item username">
-                            <label for="username" class="hidden">Användarnamn:</label>
-                            <input id="username" name="username" placeholder="Användarnamn" type="text"
-                                autocomplete="on" required />
-                        </div>
-                        <div class="grid-item password">
-                            <label for="password" class="hidden">Lösenord:</label>
-                            <input id="password" name="password" placeholder="Lösenord" type="password" required />
-                        </div>
-                        <div class="grid-item login-submit">
-                            <button type="submit" class="button"><strong>LOGGA IN</strong></button>
-                        </div>
-                    </form>
-                </div>
-            </header>
-            <!-- Main -->
-            <main>
-                <div class="container-mid">
-                    <h2 class="info">Dina uppgifter:</h2>
-                    <form action="https://httpbin.org/anything" method="post" class="main-grid" autocomplete="on">
-                        <div class="grid-item first-name">
-                            <label for="first-name" class="hidden">Förnamn:</label>
-                            <input id="first-name" name="first-name" type="text" placeholder="Förnamn" autocomplete="on"
-                                required />
-                        </div>
-                        <div class="grid-item last-name">
-                            <label for="last-name" class="hidden">Efternamn:</label>
-                            <input id="last-name" name="last-name" type="text" placeholder="Efternamn" autocomplete="on"
-                                required />
-                        </div>
-                        <div class="grid-item adress">
-                            <label for="adress" class="hidden">Adress:</label>
-                            <input id="adress" name="adress" type="text" placeholder="Adress" autocomplete="on"
-                                required />
-                        </div>
-                        <div class="grid-item company">
-                            <label for="company" class="hidden">Företag:</label>
-                            <input id="company" name="company" type="text" placeholder="Företagsnamn (Valfritt)" />
-                        </div>
-                        <div class="grid-item postal-code">
-                            <label for="postal" class="hidden">Postnummer:</label>
-                            <input id="postal" name="postal" type="text" pattern="[0-9]{3}-[0-9]{2}"
-                                placeholder="Postnummer (xxx-xx)" autocomplete="on" required />
-                        </div>
-                        <div class="grid-item postal-city">
-                            <label for="postal-city" class="hidden">Stad:</label>
-                            <input id="postal-city" name="postal-city" type="text" placeholder="Stad" autocomplete="on"
-                                required />
-                        </div>
-                        <div class="grid-item country">
-                            <h3 class="question">Bor du i Sverige?</h3>
-                            <label for="sweden">Ja</label>
-                            <input id="sweden" name="country" type="radio" value="sweden" required />
-                            <label for="other">Nej</label>
-                            <input id="other" name="country" type="radio" value="other" required />
-                        </div>
-                        <div class="grid-item email">
-                            <label for="email" class="hidden">Mejladress:</label>
-                            <input id="email" name="email" type="email" placeholder="Mejladress" autocomplete="on"
-                                required />
-                        </div>
-                        <fieldset class="grid-item subscribe">
-                            <legend>
-                                <h3 class="question">Vill du prenumerera på nyhetsbrevet?</h3>
-                            </legend>
-                            <label for="subscribe">Ja, det vill jag!</label>
-                            <input id="subscribe" name="subscribe" type="checkbox" value="subscribe-yes" checked />
-                            <label for="sale">Jag vill få mejl när det är <strong>REA</strong>!</label>
-                            <input id="sale" name="sale" type="checkbox" value="sale-yes" checked />
-                        </fieldset>
-                        <div class="grid-item order-submit">
-                            <button type="submit" class="button"><strong>BESTÄLL</strong></button>
-                        </div>
-                    </form>
-                </div>
-            </main>
-            <!-- Footer -->
-            <footer class="container-bottom">
-                <p class="credit">&copy; Viktor Wiman 2023</p>
-            </footer>
+  <body>
+    <!-- Start of container-main -->
+    <div class="container-main">
+      <!-- Header -->
+      <header>
+        <div class="container-top">
+          <div class="logo-brand">
+            <img
+              src="./images/logo.png"
+              alt="Logotyp för Gröna Systrar"
+              class="logo"
+            />
+            <h1 class="brand">Gröna Systrar</h1>
+          </div>
+          <form
+            action="https://httpbin.org/anything"
+            method="post"
+            class="top-grid"
+            autocomplete="on"
+            id="member"
+          >
+            <div class="grid-item username">
+              <label for="username" class="hidden">Användarnamn:</label>
+              <input
+                id="username"
+                name="username"
+                placeholder="Användarnamn"
+                type="text"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <div class="grid-item password">
+              <label for="password" class="hidden">Lösenord:</label>
+              <input
+                id="password"
+                name="password"
+                placeholder="Lösenord"
+                type="password"
+                required
+              />
+            </div>
+            <div class="grid-item login-submit">
+              <button type="submit" class="button">
+                <strong>LOGGA IN</strong>
+              </button>
+            </div>
+          </form>
         </div>
-        <!-- End of container-main -->
-    </body>
-
+      </header>
+      <!-- Main -->
+      <main>
+        <div class="container-mid">
+          <h2 class="info">Dina uppgifter:</h2>
+          <form
+            action="https://httpbin.org/anything"
+            method="post"
+            class="main-grid"
+            autocomplete="on"
+          >
+            <div class="grid-item first-name">
+              <label for="first-name" class="hidden">Förnamn:</label>
+              <input
+                id="first-name"
+                name="first-name"
+                type="text"
+                placeholder="Förnamn"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <div class="grid-item last-name">
+              <label for="last-name" class="hidden">Efternamn:</label>
+              <input
+                id="last-name"
+                name="last-name"
+                type="text"
+                placeholder="Efternamn"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <div class="grid-item adress">
+              <label for="adress" class="hidden">Adress:</label>
+              <input
+                id="adress"
+                name="adress"
+                type="text"
+                placeholder="Adress"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <div class="grid-item company">
+              <label for="company" class="hidden">Företag:</label>
+              <input
+                id="company"
+                name="company"
+                type="text"
+                placeholder="Företagsnamn (Valfritt)"
+              />
+            </div>
+            <div class="grid-item postal-code">
+              <label for="postal" class="hidden">Postnummer:</label>
+              <input
+                id="postal"
+                name="postal"
+                type="text"
+                pattern="[0-9]{3}-[0-9]{2}"
+                placeholder="Postnummer (xxx-xx)"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <div class="grid-item postal-city">
+              <label for="postal-city" class="hidden">Stad:</label>
+              <input
+                id="postal-city"
+                name="postal-city"
+                type="text"
+                placeholder="Stad"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <div class="grid-item country">
+              <h3 class="question">Bor du i Sverige?</h3>
+              <label for="sweden">Ja</label>
+              <input
+                id="sweden"
+                name="country"
+                type="radio"
+                value="sweden"
+                required
+              />
+              <label for="other">Nej</label>
+              <input
+                id="other"
+                name="country"
+                type="radio"
+                value="other"
+                required
+              />
+            </div>
+            <div class="grid-item email">
+              <label for="email" class="hidden">Mejladress:</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Mejladress"
+                autocomplete="on"
+                required
+              />
+            </div>
+            <fieldset class="grid-item subscribe">
+              <legend>
+                <h3 class="question">Vill du prenumerera på nyhetsbrevet?</h3>
+              </legend>
+              <label for="subscribe">Ja, det vill jag!</label>
+              <input
+                id="subscribe"
+                name="subscribe"
+                type="checkbox"
+                value="subscribe-yes"
+                checked
+              />
+              <label for="sale"
+                >Jag vill få mejl när det är <strong>REA</strong>!</label
+              >
+              <input
+                id="sale"
+                name="sale"
+                type="checkbox"
+                value="sale-yes"
+                checked
+              />
+            </fieldset>
+            <div class="grid-item order-submit">
+              <button type="submit" class="button">
+                <strong>BESTÄLL</strong>
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer class="container-bottom">
+        <p class="credit">&copy; Viktor Wiman 2023</p>
+      </footer>
+    </div>
+    <!-- End of container-main -->
+  </body>
 </html>
